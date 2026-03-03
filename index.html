@@ -445,7 +445,7 @@ and Bayesian Posterior Refinement</h1>
           
           <h4 class="title is-5" style="margin-bottom: 10px;">UWB Positioning System Setup</h4>
           <ul style="margin-top: 0; margin-bottom: 15px;">
-            <li><strong>Ground Station Architecture:</strong> The experimental area is surrounded by six fixed UWB anchors to establish a global coordinate reference.</li>
+            <li><strong>Ground Station Architecture:</strong> <li><strong>Ground Station Architecture:</strong> The experimental area is surrounded by six fixed <a href="https://www.nooploop.com/en/linktrack/" target="_blank">UWB</a> anchors to establish a global coordinate reference.</li></li>
             <li><strong>Onboard Receiver:</strong> Each UAV is equipped with a bottom-mounted UWB tag to acquire real-time position signals and transmit them to the onboard processor.</li>
             <li><strong>Coordinate Alignment:</strong> An external compass ensures precise alignment between the UWB reference frame and the flight controller's internal coordinate system.</li>
           </ul>
@@ -459,8 +459,8 @@ and Bayesian Posterior Refinement</h1>
 
           <h4 class="title is-5" style="margin-bottom: 10px;">Onboard Computing Unit</h4>
           <ul style="margin-top: 0;">
-            <li><strong>Core Processor:</strong> A Raspberry Pi 4B serves as the onboard computer, executing the high-level online learning algorithms (GP refinement) and real-time closed-loop control logic.</li>
-            <li><strong>Flight Controller:</strong> A Pixhawk 6 mini autopilot running PX4 firmware handles high-frequency attitude estimation and motor driving.</li>
+            <li><strong>Core Processor:</strong> A Raspberry Pi 4B (8GB) serves as the onboard computer, executing the high-level online learning algorithms and real-time closed-loop control for outer-loop position and velocity.</li>
+            <li><strong>Flight Controller:</strong> A Pixhawk 6 mini autopilot running PX4 firmware handles high-frequency attitude estimation, inner-loop attitude control, and motor driving..</li>
             <li><strong>Data Flow Integration:</strong> The onboard computer achieves centimeter-level positioning resolution by fusing UWB positional data with IMU inertial measurements via an EKF2 filter.</li>
           </ul>
 
